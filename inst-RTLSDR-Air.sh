@@ -28,6 +28,7 @@ echo "Getting the Code..."
 cd
 wget -O RTLSDR-Airband-4.2.0.tar.gz https://github.com/szpajder/RTLSDR-Airband/archive/v4.2.0.tar.gz
 tar xvfz RTLSDR-Airband-4.2.0.tar.gz
+rm RTLSDR-Airband-4.2.0.tar.gz
 cd RTLSDR-Airband-4.2.0
 
 
