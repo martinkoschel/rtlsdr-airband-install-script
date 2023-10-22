@@ -54,8 +54,7 @@ echo "**********************************"
 echo "Get, build, install  SOAPY..."
 echo "**********************************"
 
-folder=/home/martinkoschel
-git clone "https://github.com/pothosware/SoapySDR.git" $folder
+git clone "https://github.com/pothosware/SoapySDR.git"
 
 cd SoapySDR
 mkdir build
