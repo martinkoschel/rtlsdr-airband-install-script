@@ -33,7 +33,10 @@ apt-get -y install swig
 echo "**********************************"
 echo "Get, build, install  SOAPY..."
 echo "**********************************"
-git clone "https://github.com/pothosware/SoapySDR.git"
+
+folder=/home/martinkoschel
+git clone "https://github.com/pothosware/SoapySDR.git" $folder
+
 cd SoapySDR
 mkdir build
 cd build
