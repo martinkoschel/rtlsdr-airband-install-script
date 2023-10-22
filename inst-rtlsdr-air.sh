@@ -22,9 +22,27 @@ apt-get -y install libraspberrypi-dev
 apt-get -y install libfftw3-dev
 apt-get -y install librtlsdr-dev
 apt-get -y install libpulse-dev
+apt-get -y install g++ 
+apt-get -y install libpython3-dev 
+apt-get -y install python3-numpy 
+apt-get -y install swig
 
 
-echo "Getting the Code..."
+echo "Get, build, install  SOAPY..."
+git clone https://github.com/pothosware/SoapySDR.git
+cd SoapySDR
+mkdir build
+cd build
+cmake ..
+make -j`nproc`
+sudo make install -j`nproc`
+sudo ldconfig #needed on debian systems
+SoapySDRUtil --info
+cd
+
+echo "SOAPY Install Complete! Going on with RTL-SDR..."
+
+echo "Getting the RTLSDR-Airband Code..."
 cd
 wget -O RTLSDR-Airband-4.2.0.tar.gz https://github.com/szpajder/RTLSDR-Airband/archive/v4.2.0.tar.gz
 tar xvfz RTLSDR-Airband-4.2.0.tar.gz
