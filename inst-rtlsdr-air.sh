@@ -12,21 +12,41 @@ echo "**********************************"
 apt update
 apt full-upgrade -y
 
+echo "**********************************"
+echo " Getting Git......"
+echo "**********************************"
+apt-get -y install git
 
+echo "**********************************"
 echo "Getting Dependencies..."
+echo "**********************************"
+echo "Getting build_essential:"
 apt-get -y install build-essential
+echo "Getting cmake:"
 apt-get -y install cmake
+echo "Getting pkg-config:"
 apt-get -y install pkg-config
+echo "Getting libmp3lame-dev:"
 apt-get -y install libmp3lame-dev
+echo "Getting libshout3-dev:"
 apt-get -y install libshout3-dev
+echo "Getting :"
 apt-get -y install 'libconfig++-dev'
+echo "Getting libconfig++-dev:"
 apt-get -y install libraspberrypi-dev
+echo "Getting libfftw3-dev:"
 apt-get -y install libfftw3-dev
+echo "Getting librtlsdr-dev:"
 apt-get -y install librtlsdr-dev
+echo "Getting libpulse-dev:"
 apt-get -y install libpulse-dev
-apt-get -y install g++ 
-apt-get -y install libpython3-dev 
+echo "Getting g++:"
+apt-get -y install 'g++'
+echo "Getting libpython3-dev:"
+apt-get -y install libpython3-dev
+echo "Getting python3-numpy:"
 apt-get -y install python3-numpy 
+echo "Getting swig:"
 apt-get -y install swig
 
 
