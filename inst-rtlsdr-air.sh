@@ -70,6 +70,10 @@ echo "Getting swig:"
 apt-get -y install swig
 
 
+echo "Get RTL-SDR as a serialization tool"
+apt-get -y install rtl-sdr
+
+
 echo "**********************************"
 echo "Get, build, install  SOAPY..."
 echo "**********************************"
