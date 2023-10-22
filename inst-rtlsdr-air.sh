@@ -6,9 +6,11 @@
 
 clear
 
+echo "**********************************"
 echo "First Things First - Update and Upgrade..."
+echo "**********************************"
 apt update
-apt full-upgrade
+apt full-upgrade -y
 
 
 echo "Getting Dependencies..."
