@@ -30,9 +30,9 @@ echo "Getting libmp3lame-dev:"
 apt-get -y install libmp3lame-dev
 echo "Getting libshout3-dev:"
 apt-get -y install libshout3-dev
-echo "Getting :"
-apt-get -y install 'libconfig++-dev'
 echo "Getting libconfig++-dev:"
+apt-get -y install 'libconfig++-dev'
+echo "Getting libraspberrypi-dev:"
 apt-get -y install libraspberrypi-dev
 echo "Getting libfftw3-dev:"
 apt-get -y install libfftw3-dev
@@ -62,9 +62,9 @@ cd build
 cmake ..
 make -j`nproc`
 sudo make install -j`nproc`
-# sudo ldconfig #needed on debian systems
+sudo ldconfig #needed on debian systems
 SoapySDRUtil --info
-cd
+cd ~/
 
 echo "**********************************"
 echo "SOAPY Install Complete! Going on with RTL-SDR..."
