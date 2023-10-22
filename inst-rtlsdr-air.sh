@@ -30,7 +30,9 @@ apt-get -y install python3-numpy
 apt-get -y install swig
 
 
+echo "**********************************"
 echo "Get, build, install  SOAPY..."
+echo "**********************************"
 git clone https://github.com/pothosware/SoapySDR.git
 cd SoapySDR
 mkdir build
@@ -42,17 +44,22 @@ sudo ldconfig #needed on debian systems
 SoapySDRUtil --info
 cd
 
+echo "**********************************"
 echo "SOAPY Install Complete! Going on with RTL-SDR..."
+echo "**********************************"
 
+echo "**********************************"
 echo "Getting the RTLSDR-Airband Code..."
+echo "**********************************"
 cd
 wget -O RTLSDR-Airband-4.2.0.tar.gz https://github.com/szpajder/RTLSDR-Airband/archive/v4.2.0.tar.gz
 tar xvfz RTLSDR-Airband-4.2.0.tar.gz
 rm RTLSDR-Airband-4.2.0.tar.gz
 cd RTLSDR-Airband-4.2.0
 
-
+echo "**********************************"
 echo "Compiling..."
+echo "**********************************"
 mkdir build
 cd build
 # Writing all options in cmake parameters to cancel out prior settings from potential earlier build
@@ -60,15 +67,19 @@ cmake -DPLATFORM=native -DNFM=ON -DRTLSDR=ON -DMIRISDR=OFF -DSOAPYSDR=ON -DPULSE
 make
 make install
 
-
+echo "**********************************"
 echo "Done with RTLSDR-Airband. Next: Icecast Server"
+echo "**********************************"
 
-
+echo "**********************************"
 echo "Installing Icecast"
+echo "**********************************"
+
 apt install -y  icecast2
-
-
+echo "**********************************"
+echo "**********************************"
 echo "DONE!"
+echo "**********************************"
 echo "**********************************"
 echo "Remember to edit the config files:"
 echo " /usr/local/etc/rtl_airband.conf "
