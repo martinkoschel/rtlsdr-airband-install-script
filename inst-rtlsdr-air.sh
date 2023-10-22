@@ -40,7 +40,7 @@ cd build
 cmake ..
 make -j`nproc`
 sudo make install -j`nproc`
-sudo ldconfig #needed on debian systems
+# sudo ldconfig #needed on debian systems
 SoapySDRUtil --info
 cd
 
