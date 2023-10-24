@@ -17,3 +17,10 @@ Config Files are at:
 `/usr/local/etc/rtl_airband.conf`  
 
 `/etc/icecast2/icecast.xml`
+
+
+# Running
+
+`sudo /usr/local/bin/rtl_airband -f`
+
+The Icecast server should start itself once it sees incoming data.
