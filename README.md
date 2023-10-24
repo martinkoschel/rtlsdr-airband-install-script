@@ -8,9 +8,12 @@ The present script utilizes the excellent RTLSDR-Airband from Charlie-Foxtrot ht
 Just run inst-RTLSDR-Air.sh
 Once run complete, edit the config files as necessary, see instructions in https://github.com/charlie-foxtrot/RTLSDR-Airband. 
 
-Note: Set location for IceCast2 server as 127.0.0.1
+Note: Set location for IceCast2 server as 127.0.0.1 in the RTLSDR-Airband config file.
+
 Caution: Make sure that the ports for the icecast2 are consistent (e.g. all set to 8080, or 8080, or ...)
 
-Config Files are at: 
-`/usr/local/etc/rtl_airband.conf` 
+Config Files are at:
+
+`/usr/local/etc/rtl_airband.conf`  
+
 `/etc/icecast2/icecast.xml`
