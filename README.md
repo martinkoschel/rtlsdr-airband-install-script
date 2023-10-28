@@ -41,7 +41,7 @@ The Icecast server should start itself once it sees incoming data.
 
 ## Auto-Start on Boot
 
-`sudo cp init.d/rtl_airband.service /etc/systemd/system`
+`sudo cp rtl_airband.service /etc/systemd/system`
 
 `sudo chown root.root /etc/systemd/system/rtl_airband.service`
 
