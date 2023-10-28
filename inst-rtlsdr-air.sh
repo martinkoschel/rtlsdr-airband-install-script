@@ -123,6 +123,9 @@ make install
 
 cd ~/
 
+echo "Create RTLSDR-AIRBAND config file based on example"
+cp sample_single_rtlsdr_icecast.conf /usr/local/etc/rtl_airband.conf
+
 echo "**********************************"
 echo "Done with RTLSDR-Airband. Next: Icecast Server"
 echo "**********************************"
