@@ -1,4 +1,4 @@
-#! /bin/bash/
+#!/bin/bash
 
 # script to set up the Raspberry Pi to receive audio stream from RTLSDR-Airband via Pulse Audio
 # script by Martin Koschel 2023
