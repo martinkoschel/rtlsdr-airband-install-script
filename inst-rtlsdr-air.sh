@@ -133,6 +133,11 @@ echo "**********************************"
 
 apt install -y  icecast2
 
+echo " Setting BURST ON CONNECT to OFF"
+
+sudo sed -i "s/<burst-on-connect>1<\/burst-on-connect>/<burst-on-connect>0<\/burst-on-connect>/" /etc/icecast2/icecast.xml
+
+
 echo "**********************************"
 echo "**********************************"
 echo "DONE!"
