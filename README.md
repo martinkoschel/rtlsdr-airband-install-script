@@ -33,8 +33,25 @@ Config Files are at:
 
 
 
-# Running
+## Running
 
 `sudo /usr/local/bin/rtl_airband -f`
 
 The Icecast server should start itself once it sees incoming data.
+
+## Auto-Start on Boot
+
+`sudo cp init.d/rtl_airband.service /etc/systemd/system`
+`sudo chown root.root /etc/systemd/system/rtl_airband.service`
+`sudo systemctl daemon-reload`
+`sudo systemctl enable rtl_airband`
+
+## Start, Stop, Restart the Service
+
+`sudo systemctl start rtl_airband`
+`sudo systemctl stop rtl_airband`
+`sudo systemctl restart rtl_airband`
+
+Check the logs to see what's going on: 
+
+`journalctl -u rtl_airband`
