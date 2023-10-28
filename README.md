@@ -12,7 +12,7 @@ On the target device, in the command line, run:
 'sudo curl -L -O https://github.com/martinkoschel/rtlsdr-airband-install-script/archive/main.zip'
 
 Then Unzip:
-'unzip -j main.zip` unzips it without the archive folder structure, i.e. into the current directory. 
+`unzip -j main.zip` unzips it without the archive folder structure, i.e. into the current directory. 
 
 ## Install
 
