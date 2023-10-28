@@ -47,7 +47,7 @@ echo " paprefs is looking for its setting file in the wrong place."
 echo " fixing that, creating a symlink to point to the right spot..."
 
 # Find the directory starting with "pulse" in /etc/lib
-pulse_dir=$(find /usr/lib -type d -name 'pulse*' -print -quit)
+pulse_dir=$(find /usr/lib -maxdepth 1 -type d -name 'pulse*' -print -quit)
 
 # Check if a matching directory was found
 if [ -n "$pulse_dir" ]; then
