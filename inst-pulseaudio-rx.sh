@@ -39,24 +39,16 @@ echo "**********************************"
 echo " Oops, looks like there are none..."
 
 echo "**********************************"
-echo " setting up PAPREFS tool.."
+echo "Getting pavucontrol..."
 echo "**********************************"
-apt-get -y install paprefs
+apt-get -y install pavucontrol
 
-echo " paprefs is looking for its setting file in the wrong place."
-echo " fixing that, creating a symlink to point to the right spot..."
+echo "**********************************"
+echo "Getting pulsectl..."
+echo "**********************************"
+apt-get -y install pulsectl
 
-# Find the directory starting with "pulse" in /etc/lib
-pulse_dir=$(find /usr/lib -maxdepth 1 -type d -name 'pulse*' -print -quit)
 
-# Check if a matching directory was found
-if [ -n "$pulse_dir" ]; then
-    # Create a symlink to /usr/lib/pulse-13.99
-    ln -s "$pulse_dir" /usr/lib/pulse-13.99
-    echo "Symlink created successfully."
-else
-    echo "No directory starting with 'pulse' found in /etc/lib."
-fi
 
 echo "**********************************"
 echo " DONE. "
