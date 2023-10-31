@@ -2,7 +2,7 @@
 Install script for a Raspberry-Pi + RTLSDR -based device to serve airband radio on a network. 
 
 ## Acknowledgements
-The present script utilizes the excellent RTLSDR-Airband from Charlie-Foxtrot https://github.com/charlie-foxtrot/RTLSDR-Airband
+The present script installs the excellent RTLSDR-Airband from Charlie-Foxtrot https://github.com/charlie-foxtrot/RTLSDR-Airband, activates the Icecast2 server, and makes basic configurations.
 
 # Instructions
 
