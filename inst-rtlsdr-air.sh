@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script to install RTL-SDR with all dependencies
-# Assumes RTL-SDR, Raspberry Pi
+# Assumes RTL-SDR, Raspberry Pi 4
 # gets RTLSDR-Airband v4.2.0
 
 clear
@@ -113,6 +113,7 @@ cd build
 # The below seemed to have issues, producing a "Kernel Driver Detached" error when invoking rtlsdr-air -f
 # trying plain cmake ../
 # Writing all options in cmake parameters to cancel out prior settings from potential earlier build
+# Below works for Raspberry Pi 4. Modify '-DPLATFORM' as necessary for others.
 
 cmake -DPLATFORM=armv8-generic -DNFM=ON -DRTLSDR=ON -DMIRISDR=OFF -DSOAPYSDR=ON -DPULSEAUDIO=ON -DPROFILING=OFF -DCMAKE_BUILD_TYPE=Release ../
 
