@@ -113,7 +113,13 @@ cd build
 # The below seemed to have issues, producing a "Kernel Driver Detached" error when invoking rtlsdr-air -f
 # trying plain cmake ../
 # Writing all options in cmake parameters to cancel out prior settings from potential earlier build
-# Below works for Raspberry Pi 4. Modify '-DPLATFORM' as necessary for others.
+# Below works for Raspberry Pi 4. Modify '-DPLATFORM' as necessary for others:
+# rpiv1 - Raspberry Pi version 1 (ARMv6 CPU, Broadcom VideoCore IV GPU)
+# rpiv2 - Raspberry Pi version 2 or 3 (ARMv7 CPU, Broadcom VideoCore IV GPU)
+# armv7-generic - ARMv7-based platforms, no VideoCore IV GPU (eg. Cubieboard)
+# armv8-generic - 64-bit ARM platforms, no VideoCore IV GPU (eg. Raspberry Pi version 4, Odroid C2)
+# native - causes the compiler to figure out the CPU type automatically and pick the most appropriate set of optimizations for it. This will NOT autodetect the presence of VideoCode GPU!
+# default - generic build with no platform-specific optimizations. Use this in case when you want a portable binary or if your compiler does not support -march=native option. This is the default setting.
 
 cmake -DPLATFORM=armv8-generic -DNFM=ON -DRTLSDR=ON -DMIRISDR=OFF -DSOAPYSDR=ON -DPULSEAUDIO=ON -DPROFILING=OFF -DCMAKE_BUILD_TYPE=Release ../
 
