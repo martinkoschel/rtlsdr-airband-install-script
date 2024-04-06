@@ -51,7 +51,8 @@ apt-get -y install pavucontrol
 echo "**********************************"
 echo "Getting pulsectl..."
 echo "**********************************"
-apt-get -y install pulsectl
+# apt-get -y install pulsectl #produces error on Bookworm
+apt-get -y install python3-pulsectl
 
 echo "**********************************"
 echo "Getting paprefs..."
