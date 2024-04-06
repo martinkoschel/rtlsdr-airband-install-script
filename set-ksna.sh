@@ -6,7 +6,7 @@ cd ~/
 
 echo "Create RTLSDR-AIRBAND config file based on example file....."
 user_home=$(eval echo ~$SUDO_USER)
-source_file="$user_home/KSNA-Airband.conf"
+source_file="$user_home/rtlsdr-airband-install-script/ksna-airband.conf"
 destination_file=/usr/local/etc/rtl_airband.conf
 cp "$source_file" "$destination_file"
 echo "KSNA Configuration File copied over. Adjust as necessary!"
