@@ -70,7 +70,29 @@ systemctl --system start pulseaudio.service
 cp ./client.conf /etc/pulse/client.conf        
 sed -i '/^pulse-access:/ s/$/root,pi/' /etc/group
 
+# Define the line to add to pulseaudio config file
+line_to_add="load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;10.0.0.1/8"
 
+# Define the file path
+file_path="/etc/pulse/default.pa"
+
+# Define the text block after which to add the line
+block_marker="### Network access (may be configured with paprefs, so leave this commented)"
+end_of_block_marker="^#load-module module-zeroconf-publish$"
+
+# Use sed to insert the line after the specified block
+sed -i "/$block_marker/,/$end_of_block_marker/{/$block_marker/n;/^$end_of_block_marker/a\\$line_to_add
+}" "$file_path"
+
+echo "Line $line_to_add added to $file_path"
+
+# Define the line to uncomment
+line_to_uncomment="#load-module module-rtp-recv"
+
+# Use sed to uncomment the line in the file
+sed -i "s|^$line_to_uncomment|load-module module-rtp-recv|" "$file_path"
+
+echo "Line $line_to_uncomment uncommented in $file_path"
 
 
 echo "**********************************"
