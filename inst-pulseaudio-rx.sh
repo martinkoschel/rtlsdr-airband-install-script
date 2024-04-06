@@ -39,6 +39,11 @@ echo "**********************************"
 echo " Oops, looks like there are none..."
 
 echo "**********************************"
+echo "Getting pulseaudio..."
+echo "**********************************"
+apt-get -y install pulseaudio pulseaudio-module-zeroconf pulseaudio-utils
+
+echo "**********************************"
 echo "Getting pavucontrol..."
 echo "**********************************"
 apt-get -y install pavucontrol
@@ -48,6 +53,10 @@ echo "Getting pulsectl..."
 echo "**********************************"
 apt-get -y install pulsectl
 
+echo "**********************************"
+echo "Getting paprefs..."
+echo "**********************************"
+apt-get -y install paprefs
 
 
 echo "**********************************"
