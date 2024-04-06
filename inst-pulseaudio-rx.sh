@@ -61,6 +61,19 @@ apt-get -y install paprefs
 
 
 echo "**********************************"
+echo "Some Pulseaudio Setup..."
+echo "**********************************"
+
+cp ./pulseaudio.service /etc/systemd/system/pulseaudio.service
+systemctl --system enable pulseaudio.service       
+systemctl --system start pulseaudio.service       
+cp ./client.conf /etc/pulse/client.conf        
+sed -i '/^pulse-access:/ s/$/root,pi/' /etc/group
+
+
+
+
+echo "**********************************"
 echo " DONE. "
 echo " "
 echo " Use GUI to configure PAPREFS! "
